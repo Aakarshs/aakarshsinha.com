@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .nav_bar_buttons {
+            color: white;
+            font-family: home_impact;
+            margin-left: 20px;
+            margin-right: 20px;
+            text-decoration: none;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        .avatars {
+            height: 200px;
+            width: 200px;
+            border-radius: 500px;
+            margin: 30px;
+            background-color: aliceblue;
+            z-index: 999999999;
+        }
+
+        @font-face {
+            font-family: "home_impact";
+            src: url(./Fonts/impact.ttf) format("truetype");
+        }
+
+        @media screen and (min-width: 600px) {
+            .section_1 {
+                display: flex;
+                flex-direction: column;
+                color: white;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                margin-left: 20%;
+            }
+        }
+
+        /* Portrait */
+        @media screen and (max-width: 600px) {
+            .nav_bar_buttons {
+                display: none;
+            }
+
+            .logo1 {
+                opacity: 0;
+
+            }
+
+            .logo {
+                align-self: center;
+                text-align: center;
+                display: initial !important;
+                height: 55px;
+                width: 160px;
+            }
+
+            .coin {
+                display: none;
+            }
+
+            .foot {
+                display: none;
+            }
+
+            .social {
+                display: none !important;
+            }
+
+            .pedestals {
+                opacity: 0.2;
+            }
+
+            .slogan {
+                font-size: 20px !important;
+
+            }
+
+            .bg {
+                background: rgba(14, 9, 82, 0.8) !important;
+            }
+
+            .download_in {
+                margin-left: 0px !important;
+            }
+
+            .download {
+                margin-left: -18px;
+                align-self: center !important;
+                display: flex;
+                flex-direction: column !important;
+                flex-wrap: wrap;
+            }
+
+            html,
+            body {
+                overflow-x: hidden !important;
+
+            }
+
+            .section_2 {
+                position: absolute;
+                right: 0px !important;
+                left: 0px !important;
+                color: white
+            }
+
+
+            .section_1 {
+                text-align: center;
+                justify-content: center;
+                align-self: center;
+                display: flex;
+                flex-direction: column;
+                color: white;
+                position: absolute;
+                right: 0px !important;
+                left: 0px !important;
+            }
+
+            .section_3 {
+                height: 1500px !important;
+                align-items: center;
+            }
+
+            .description {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                margin-left: 0 !important;
+                top: 12%;
+                margin-right: 0 !important;
+            }
+
+            .download_button {
+                align-self: center !important;
+                transform: translateY(0px);
+                border-width: 0;
+                padding: 20px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                margin-left: 0px !important;
+            }
+
+            .about {
+                width: 300px !important;
+            }
+
+            .icon {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        #myVideo {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -9999;
+        }
+
+        .popup {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        /* The actual popup */
+        .popup .popuptext {
+            visibility: hidden;
+            width: 160px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 8px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -80px;
+        }
+
+        /* Popup arrow */
+        .popup .popuptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+
+        /* Toggle this class - hide and show the popup */
+        .popup .show {
+            visibility: visible;
+            -webkit-animation: fadeIn 1s;
+            animation: fadeIn 1s;
+        }
+
+        /* Add animation (fade in the popup) */
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .buttons {
+            right: 0px !important;
+            left: 0px !important;
+            align-self: center;
+            text-align: center;
+            width: 100px;
+            margin: 50px;
+        }
+    </style>
+</head>
+
+<body style="margin:0">
+    <div class="section_3" style="background: rgb(89,46,145);
+    background: -moz-linear-gradient(top, rgb(89,46,145) 0%, rgb(46,49,146) 100%);
+    background: -webkit-linear-gradient(top, rgb(89,46,145) 0%,rgb(46,49,146) 100%);
+    background: linear-gradient(to bottom, rgb(89,46,145) 0%,rgb(46,49,146) 100%);
+    height: 100vh; flex-direction: column; display: flex; align-items: center; position:relative">
+       <a href="./index">  <div><img style=" margin-top: 100px; margin-bottom: 10px; width: 80px;" src="./Assets/back.png" /></div></a>
+        <div style="font-family: home_impact;color:#fff; font-size: 150%">CONTACT US</div>
+
+        <div style="display: flex; flex-direction: row; flex-wrap: wrap; text-align: center; align-items: center; justify-content: center">
+            <a href="https://www.facebook.com/FreezieApps/">  <div> <img class="buttons" src="Assets/facebook.png"></div></a>
+            <a href="https://www.instagram.com/freezieapps/"> <div><img class="buttons" src="Assets/instagram.png"></div> </a>
+            <a href="mailto:teamfreezieapps@gmail.com">    <div><img class="buttons" src="Assets/email.png"></div></a>
+            <div class="popup" onclick="myFunction()"><img class="buttons" src="Assets/phone.png">
+                <span class="popuptext" id="myPopup">
+                    +995 595 56 01 01</span>
+            </div>
+       
+            <a name="team"></a>
+
+            <img class="foot" src="./Assets/footer_left.png" style="position:absolute; left:40px;  width:150px; bottom:0; overflow: hidden;" />
+            <img src="./Assets/footer_right.png" style="position:absolute; right:40px;  width:300px; bottom:0; overflow: hidden;" />
+        </div>
+
+
+        <script>
+            function myFunction() {
+                var popup = document.getElementById("myPopup");
+                popup.classList.toggle("show");
+            }
+        </script>
+
+
+</body>
+
+</html>
