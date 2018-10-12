@@ -1,8 +1,966 @@
 <!DOCTYPE html>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <html>
 
-<body>
-    Website is under construction.
-  
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .{
+            overflow-x: hidden !important;
+        }
+
+        .navText {
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .navText:hover {
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration: none;
+            font-size: 20px;
+            border-width: 2px;
+            border-color: white;
+            border-style: solid;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 500px;
+            transition: all 0.2s ease-in-out;
+
+        }
+
+        .navText:focus {
+            color: #362392;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration: none;
+            font-size: 20px;
+            background-color: white;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 500px;
+            transition: all 0.2s ease-in-out;
+        }
+
+
+
+        #nav {
+            margin: 20px;
+        }
+
+        #title {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: aliceblue;
+            font-size: 40px;
+        }
+
+        #position {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: aliceblue;
+            font-size: 20px;
+        }
+
+        #paragraph {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: aliceblue;
+        }
+
+        #sections {
+            margin-bottom: 60px;
+        }
+
+
+        #myImg {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #myImg:hover {
+            opacity: 0.7;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content (image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        /* Caption of Modal Image */
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation */
+        .modal-content,
+        #caption {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #responsive {
+            margin-top: 50%;
+        }
+
+        @media only screen and (max-width: 600px) {
+            #responsive {
+                margin-top: 200%;
+            }
+
+            #level {
+                width: 300% !important;
+            }
+            #section4{
+    display:flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    }
+
+#main-image{
+    width:200%;
+    opacity:0.2;
+}
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+
+        #level-root {
+            margin: 2px;
+        }
+
+        #level {
+            width: 400px;
+            border-radius: 100px;
+            background: rgba(255, 255, 255, 0.2);
+            height: 20px;
+        }
+
+
+        #skill-text {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-bottom: 2px;
+            color: #f2f2f2;
+            font-size: 15px;
+        }
+
+        #other-skills {
+            font-size: 15px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: white;
+        }
+
+        #progress-bar {
+            border-radius: 100px;
+            height: 20px;
+            background: #8CC63F;
+        }
+
+
+        #intro-paragraph {
+            color: white;
+            margin: 50px;
+        }
+
+#section4{
+    display:flex; 
+    flex-direction: row;
+    }
+
+    </style>
+</head>
+
+<body style="margin:0;">
+    <div style="background: rgba(252,237,33,1);
+background: #5c36dc; /* Old browsers */
+background: -moz-linear-gradient(top, #5c36dc 17%, #1b1464 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #5c36dc 17%,#1b1464 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #5c36dc 17%,#1b1464 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c36dc', endColorstr='#1b1464',GradientType=0 ); 
+
+        height:100%;width:100%; z-index:-99999999999; position: fixed;
+
+        "></div>
+
+    <div style=" top:200px;left:50px;position:absolute;color:aliceblue; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 50px; z-index: 99;">
+        <div style="font-size:25px; color:#F54046">
+            WHAT IS AAKARSH?</br>
+        </div>
+        AAKARSH SINHA (ROUTH) </br>
+        <div style="font-size:25px">
+            DESIGNER?ENGINEER?</br>
+            STUDENT?EVERYTHING?</br>
+            WAIT! WHAT?
+        </div>
+
+        <div style="display: flex; flex-direction: row">
+            <div><img src="./Assets/linkedin.png" width=60px style="margin-right:20px"></div>
+            <div><img src="./Assets/github.png" width=60px style="margin-right:20px"></div>
+            <div><img src="./Assets/facebook.png" width=60px style="margin-right:20px"></div>
+        </div>
+    </div>
+
+    <img id="main-image" src="./Assets/aakarsh3.png" style="position: absolute; right:0" width=55%>
+
+    <div id="responsive" style="position: absolute; left: 50%; ">
+
+        <div style="position: relative; left: -50%; ">
+            <div>
+                <div style="display: flex; flex-direction: row;  
+                align-self: center;   flex-wrap: wrap; align-items: center;  justify-content: center; width:100%">
+
+                    <div id="nav" role="presentation" class="active"><a class="navText" href="#1" aria-controls="1"
+                            role="tab" data-toggle="tab">Experiences</a></div>
+                    <div id="nav" role="presentation"><a class="navText" href="#2" aria-controls="2" role="tab"
+                            data-toggle="tab">Ongoing
+                            Projects</a></div>
+                    <div id="nav" role="presentation"><a class="navText" href="#3" aria-controls="3" role="tab"
+                            data-toggle="tab">Skills</a></div>
+                    <div id="nav" role="presentation"><a class="navText" href="#4" aria-controls="4" role="tab"
+                            data-toggle="tab">Design</a></div>
+                </div>
+
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="1">
+                        <div id="intro-paragraph">
+                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                            architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                            voluptas
+                            sit
+                        </div>
+                        <div id="sections" style="display: flex; flex-direction: row">
+                            <div><img src="./Assets/nadalogo.png" width=100px style="margin-right:20px"></div>
+                            <div style="display: flex; flex-direction: column">
+                                <div id="title">Nadabot</div>
+                                <div id="position">Chief Product Officer</div>
+                                <div id="paragraph">
+                                    <ul>
+                                        <li>Co-founded an A.I. driven app that connects students within their college’s
+                                            virtual marketplace. </li>
+                                        <li>Worked extensively with React and React Native and android and iOS apis to
+                                            build a cross platform app, </li>
+                                        <li>Other roles in company: </li>
+                                        <li> Designed website, all aspects of the app, and all marketing materials </li>
+                                        <li>Lead a team of 12 and Nadabot cinematographer and photographer </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br />
+                        <div id="sections" style="display: flex; flex-direction: row">
+                            <div><img src="./Assets/freezie.png" width=100px style="margin-right:20px"></div>
+                            <div style="display: flex; flex-direction: column">
+                                <div id="title">Freezie Apps</div>
+                                <div id="position">Co-Founder</div>
+                                <div id="paragraph">
+                                    <ul>
+                                        <li> Released Rollyal (our first game) in August, had over 500 downloads in
+                                            first
+                                            week </li>
+                                        <li> Used Swift to publish Rollyal on the App Store </li>
+                                        <li> Currently coding next game using C# and will publish with Unity</li>
+                                        <li> Designed models and textures using Cinema 4D and Autodesk Maya</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br />
+                        <div id="sections" style="display: flex; flex-direction: row">
+                            <div><img src="./Assets/methane.png" width=100px style="margin-right:20px"></div>
+                            <div style="display: flex; flex-direction: column">
+                                <div id="title">Methane Hub</div>
+                                <div id="position">Interim Chief Technology Officer</div>
+                                <div id="paragraph">
+                                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                    doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                    voluptas
+                                    sit
+                                    aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+                                    vel illum qui dolorem eum fugiat quo voluptas nulla
+                                    pariatur?"
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div id="sections" style="display: flex; flex-direction: row">
+                            <div><img src="./Assets/hod.png" width=100px style="margin-right:20px"></div>
+                            <div style="display: flex; flex-direction: column">
+                                <div id="title">House of Design</div>
+                                <div id="position">Founder and CEO</div>
+                                <div id="paragraph">
+                                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                    doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                    voluptas
+                                    sit
+                                    aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+                                    vel illum qui dolorem eum fugiat quo voluptas nulla
+                                    pariatur?"
+                                </div>
+                            </div>
+                        </div>
+
+                        <br />
+                        <div id="sections" style="display: flex; flex-direction: row">
+                            <div><img src="./Assets/oxaro.png" width=100px style="margin-right:20px; border-radius:500;"></div>
+                            <div style="display: flex; flex-direction: column">
+                                <div id="title">Oxaro</div>
+                                <div id="position">Chief Product Officer</div>
+                                <div id="paragraph">
+                                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                    doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                    voluptas
+                                    sit
+                                    aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+                                    vel illum qui dolorem eum fugiat quo voluptas nulla
+                                    pariatur?"
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div id="sections" style="display: flex; flex-direction: row">
+                            <div><img src="./Assets/earlham.png" width=100px style="margin-right:20px"></div>
+                            <div style="display: flex; flex-direction: column">
+                                <div id="title">Earlham college</div>
+                                <div id="position">Tutor/Teaching Assitant</div>
+                                <div id="paragraph">
+                                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                    doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                    voluptas
+                                    sit
+                                    aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+                                    vel illum qui dolorem eum fugiat quo voluptas nulla
+                                    pariatur?"
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div id="sections" style="display: flex; flex-direction: row">
+                            <div><img src="./Assets/lamartiniere.png" width=100px style="margin-right:20px"></div>
+                            <div style="display: flex; flex-direction: column">
+                                <div id="title">La Martiniere College</div>
+                                <div id="position">Web Developer</div>
+                                <div id="paragraph">
+                                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                    doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                    voluptas
+                                    sit
+                                    aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+                                    vel illum qui dolorem eum fugiat quo voluptas nulla
+                                    pariatur?"
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane" id="2">
+                        <div id="intro-paragraph">
+                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                            architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                            voluptas
+                            sit
+                        </div>
+
+                        <div id="sections" style="display: flex; flex-direction: row">
+                            <div><img src="./Assets/fish.png" width=100px style="margin-right:20px"></div>
+                            <div style="display: flex; flex-direction: column">
+                                <div id="title">Fish Findr</div>
+                                <div id="position">Web Developer</div>
+                                <div id="paragraph">
+                                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                    doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                    voluptas
+                                    sit
+                                    aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+                                    vel illum qui dolorem eum fugiat quo voluptas nulla
+                                    pariatur?"
+                                </div>
+                            </div>
+                        </div>
+
+                        <br />
+
+                        <div id="sections" style="display: flex; flex-direction: row">
+                            <div><img src="./Assets/bug.png" width=100px style="margin-right:20px"></div>
+                            <div style="display: flex; flex-direction: column">
+                                <div id="title">The Bug</div>
+                                <div id="position">Web Developer</div>
+                                <div id="paragraph">
+                                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                    doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                    voluptas
+                                    sit
+                                    aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+                                    vel illum qui dolorem eum fugiat quo voluptas nulla
+                                    pariatur?"
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="sections" style="display: flex; flex-direction: row">
+                            <div><img src="./Assets/calculator.png" width=100px style="margin-right:20px"></div>
+                            <div style="display: flex; flex-direction: column">
+                                <div id="title">The Calculator</div>
+                                <div id="position">Web Developer</div>
+                                <div id="paragraph">
+                                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                    doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                    voluptas
+                                    sit
+                                    aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+                                    vel illum qui dolorem eum fugiat quo voluptas nulla
+                                    pariatur?"
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div id="sections" style="display: flex; flex-direction: row">
+                            <div><img src="./Assets/tsa.png" width=100px style="margin-right:20px"></div>
+                            <div style="display: flex; flex-direction: column">
+                                <div id="title">Twitter Sentiment Analysis App</div>
+                                <div id="position">Web Developer</div>
+                                <div id="paragraph">
+                                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                    doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                    voluptas
+                                    sit
+                                    aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+                                    vel illum qui dolorem eum fugiat quo voluptas nulla
+                                    pariatur?"
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div id="sections" style="display: flex; flex-direction: row">
+                            <div><img src="./Assets/ni.png" width=100px style="margin-right:20px"></div>
+                            <div style="display: flex; flex-direction: column">
+                                <div id="title">Noteit!</div>
+                                <div id="position">Web Developer</div>
+                                <div id="paragraph">
+                                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                    doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                    voluptas
+                                    sit
+                                    aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+                                    vel illum qui dolorem eum fugiat quo voluptas nulla
+                                    pariatur?"
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane" id="3">
+                        <div id="intro-paragraph">
+                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                            architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                            voluptas
+                            sit
+                        </div>
+                        <div style="display: flex; flex-direction: row; flex-wrap: wrap;">
+                            <div style="display: flex; flex-direction: column;">
+                                <div id="level-root">
+                                    <div id="skill-text">Python</div>
+                                    <div id="level">
+                                        <div id="progress-bar" style="width:90%;"></div>
+                                    </div>
+                                </div>
+                                <div id="level-root">
+                                    <div id="skill-text">JavaScript</div>
+                                    <div id="level">
+                                        <div id="progress-bar" style="width:90%;"></div>
+                                    </div>
+                                </div>
+                                <div id="level-root">
+                                    <div id="skill-text">React Native</div>
+                                    <div id="level">
+                                        <div id="progress-bar" style="width:87%;"></div>
+                                    </div>
+                                </div>
+                                <div id="level-root">
+                                    <div id="skill-text">React</div>
+                                    <div id="level">
+                                        <div id="progress-bar" style="width:87%;"></div>
+                                    </div>
+                                </div>
+                                <div id="level-root">
+                                    <div id="skill-text">CSS</div>
+                                    <div id="level">
+                                        <div id="progress-bar" style="width:100%;"></div>
+                                    </div>
+                                </div>
+                                <div id="level-root">
+                                    <div id="skill-text">HTML</div>
+                                    <div id="level">
+                                        <div id="progress-bar" style="width:100%;"></div>
+                                    </div>
+                                </div>
+                                <div id="level-root">
+                                    <div id="skill-text">SASS</div>
+                                    <div id="level">
+                                        <div id="progress-bar" style="width:95%;"></div>
+                                    </div>
+                                </div>
+                                <div id="level-root">
+                                    <div id="skill-text">Bootstrap</div>
+                                    <div id="level">
+                                        <div id="progress-bar" style="width:90%;"></div>
+                                    </div>
+                                </div>
+                                <div id="level-root">
+                                    <div id="skill-text">Swift</div>
+                                    <div id="level">
+                                        <div id="progress-bar" style="width:85%;"></div>
+                                    </div>
+                                </div>
+                                <div id="level-root">
+                                    <div id="skill-text">jQuery</div>
+                                    <div id="level">
+                                        <div id="progress-bar" style="width:85%;"></div>
+                                    </div>
+                                </div>
+                                <div id="level-root">
+                                    <div id="skill-text">Ruby</div>
+                                    <div id="level">
+                                        <div id="progress-bar" style="width:70%;"></div>
+                                    </div>
+                                </div>
+                                <div id="level-root">
+                                    <div id="skill-text">C</div>
+                                    <div id="level">
+                                        <div id="progress-bar" style="width:75%;"></div>
+                                    </div>
+                                </div>
+                                <div id="level-root">
+                                    <div id="skill-text">Java</div>
+                                    <div id="level">
+                                        <div id="progress-bar" style="width:80%;"></div>
+                                    </div>
+                                </div>
+                                <div id="level-root">
+                                    <div id="skill-text">Angular</div>
+                                    <div id="level">
+                                        <div id="progress-bar" style="width:50%;"></div>
+                                    </div>
+                                </div>
+                                <div id="level-root">
+                                    <div id="skill-text">Node.js</div>
+                                    <div id="level">
+                                        <div id="progress-bar" style="width:20%;"></div>
+                                    </div>
+                                </div>
+                                <div id="level-root">
+                                    <div id="skill-text">Haskell</div>
+                                    <div id="level">
+                                        <div id="progress-bar" style="width:70%;"></div>
+                                    </div>
+                                </div>
+                                <div id="level-root">
+                                    <div id="skill-text">MySQL</div>
+                                    <div id="level">
+                                        <div id="progress-bar" style="width:60%;"></div>
+                                    </div>
+                                </div>
+                                <div id="level-root">
+                                    <div id="skill-text">Ruby</div>
+                                    <div id="level">
+                                        <div id="progress-bar" style="width:60%;"></div>
+                                    </div>
+                                </div>
+                                <div id="level-root">
+                                    <div id="skill-text">Express.js</div>
+                                    <div id="level">
+                                        <div id="progress-bar" style="width:20%;"></div>
+                                    </div>
+                                </div>
+                                <div style="margin-bottom: 60px;"></div>
+
+                            </div>
+
+                            <div style="display: flex; flex-direction: column; margin-left: 50px;">
+                                <div style="font-size:20px; color:white">Other Skills</div>
+                                <ul>
+                                    <li id="other-skills">Adobe Illustrator</li>
+                                    <li id="other-skills">ADobe Photoshop</li>
+                                    <li id="other-skills">Adobe Premirere</li>
+                                    <li id="other-skills">GIT</li>
+                                    <li id="other-skills">Autodesk Maya</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div role="tabpanel" class="tab-pane" id="4">
+                        <div id="intro-paragraph">
+                            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                            architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                            voluptas
+                            sit
+                        </div>
+                        <div style="flex-wrap:wrap;  display: flex; flex-direction: column">
+                            <div style="font-size: 50px; color:white"> UI/UX DESIGN</div>
+                            <div id="section4">
+
+                                <div>
+                                    <div id="paragraph" style="width:300px">
+                                        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                        doloremque
+                                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+                                        quasi
+                                        architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                        voluptas
+                                        sit
+                                    </div>
+                                    <img id="myImg" src="./Assets/aakarsh.png" alt="Snow" style="width:100%;max-width:300px">
+                                    <div id="myModal" class="modal">
+                                        <span class="close">&times;</span>
+                                        <img class="modal-content" id="img01">
+                                        <div id="caption"></div>
+                                    </div>
+
+                                </div>
+
+                                <div>
+                                    <div id="paragraph" style="width:300px">
+                                        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                        doloremque
+                                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+                                        quasi
+                                        architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                        voluptas
+                                        sit
+
+                                    </div>
+                                    <img id="myImg2" src="./Assets/calculator.png" alt="Snow" style="width:100%;max-width:300px">
+                                    <div id="myModal2" class="modal">
+                                        <span class="close">&times;</span>
+                                        <img class="modal-content" id="img02">
+                                        <div id="caption"></div>
+                                    </div>
+                                </div>
+
+
+                                <div>
+                                    <div id="paragraph" style="width:300px">
+                                        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                        doloremque
+                                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+                                        quasi
+                                        architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                        voluptas
+                                        sit
+
+                                    </div>
+                                    <img id="myImg3" src="./Assets/calculator.png" alt="Snow" style="width:100%;max-width:300px">
+                                    <div id="myModal3" class="modal">
+                                        <span class="close">&times;</span>
+                                        <img class="modal-content" id="img03">
+                                        <div id="caption"></div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div id="paragraph" style="width:300px">
+                                        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                        doloremque
+                                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+                                        quasi
+                                        architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                        voluptas
+                                        sit
+
+                                    </div>
+                                    <img id="myImg4" src="./Assets/calculator.png" alt="Snow" style="width:100%;max-width:300px">
+                                    <div id="myModal4" class="modal">
+                                        <span class="close">&times;</span>
+                                        <img class="modal-content" id="img04">
+                                        <div id="caption"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="font-size: 50px; color:white"> Other Designs</div>
+                            <div id="section4">
+                                <div>
+                                    <div id="paragraph" style="width:300px">
+                                        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                        doloremque
+                                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+                                        quasi
+                                        architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                        voluptas
+                                        sit
+
+                                    </div>
+                                    <img id="myImg" src="./Assets/aakarsh.png" alt="Snow" style="width:100%;max-width:300px">
+                                    <div id="myModal" class="modal">
+                                        <span class="close">&times;</span>
+                                        <img class="modal-content" id="img01">
+                                        <div id="caption"></div>
+                                    </div>
+
+                                </div>
+
+                                <div>
+                                    <div id="paragraph" style="width:300px">
+                                        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                        doloremque
+                                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+                                        quasi
+                                        architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                        voluptas
+                                        sit
+
+                                    </div>
+                                    <img id="myImg2" src="./Assets/calculator.png" alt="Snow" style="width:100%;max-width:300px">
+                                    <div id="myModal2" class="modal">
+                                        <span class="close">&times;</span>
+                                        <img class="modal-content" id="img02">
+                                        <div id="caption"></div>
+                                    </div>
+                                </div>
+
+
+                                <div>
+                                    <div id="paragraph" style="width:300px">
+                                        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                        doloremque
+                                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+                                        quasi
+                                        architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                        voluptas
+                                        sit
+
+                                    </div>
+                                    <img id="myImg3" src="./Assets/calculator.png" alt="Snow" style="width:100%;max-width:300px">
+                                    <div id="myModal3" class="modal">
+                                        <span class="close">&times;</span>
+                                        <img class="modal-content" id="img03">
+                                        <div id="caption"></div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div id="paragraph" style="width:300px">
+                                        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                        doloremque
+                                        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+                                        quasi
+                                        architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                        voluptas
+                                        sit
+
+                                    </div>
+                                    <img id="myImg4" src="./Assets/calculator.png" alt="Snow" style="width:100%;max-width:300px">
+                                    <div id="myModal4" class="modal">
+                                        <span class="close">&times;</span>
+                                        <img class="modal-content" id="img04">
+                                        <div id="caption"></div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                            <div style="margin-bottom:80px; margin-top:50px; display:flex; flex-direction: column; align-items: center">
+                                <div>to find out more about my deisgns visit</div>
+                                <div style="width:100px; margin-top:10px;height:100px; background-color:white"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div>
+
+
+    </div>
+
+    <script>
+        var modal = document.getElementById('myModal');
+        var img = document.getElementById('myImg');
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        var modal = document.getElementById('myModal2');
+        var img = document.getElementById('myImg2');
+        var modalImg = document.getElementById("img02");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+        var span = document.getElementsByClassName("close")[1];
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        var modal = document.getElementById('myModal3');
+        var img = document.getElementById('myImg3');
+        var modalImg = document.getElementById("img03");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+        var span = document.getElementsByClassName("close")[2];
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        var modal = document.getElementById('myModal4');
+        var img = document.getElementById('myImg4');
+        var modalImg = document.getElementById("img04");
+        var captionText = document.getElementById("caption");
+        img.onclick = function () {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+        var span = document.getElementsByClassName("close")[3];
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+
+    </script>
+
+
+
 </body>
+
 </html>
