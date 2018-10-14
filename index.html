@@ -17,13 +17,14 @@
             src: url(./Fonts/gill.TTF) format("truetype");
         }
 
-         @font-face {
+        @font-face {
             font-family: "Oswald";
             src: url(./Fonts/Oswald-Regular.ttf) format("truetype");
         }
+
         .navText {
             color: white;
-            font-family:  gill_internal;
+            font-family: gill_internal;
             text-decoration: none;
             font-size: 20px;
         }
@@ -47,7 +48,7 @@
 
         .navText:focus {
             color: #362392;
-            font-family:  gill_internal;
+            font-family: gill_internal;
             text-decoration: none;
             font-size: 20px;
             background-color: white;
@@ -78,7 +79,7 @@
         }
 
         #paragraph {
-            font-family:  gill_internal;
+            font-family: gill_internal;
             color: aliceblue;
         }
 
@@ -150,6 +151,9 @@
             animation-duration: 0.6s;
         }
 
+
+
+
         @-webkit-keyframes zoom {
             from {
                 -webkit-transform: scale(0)
@@ -193,22 +197,67 @@
         }
 
 
-#who{
-   top:200px;
-   left:50px;
-   position:absolute;
-   color:aliceblue; 
-   font-family: Oswald; 
-   font-size: 50px;
-    z-index: 99;
+        #who {
+            top: 200px;
+            left: 50px;
+            position: absolute;
+            color: aliceblue;
+            font-family: Oswald;
+            font-size: 50px;
+            z-index: 99;
 
-}
+        }
 
+        #date {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 20px;
+            font-family: gill_internal;
+            color: white;
+
+        }
+
+        #social {
+           
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 1s;
+            animation-name: zoom;
+            animation-duration: 1s;
+        }
+
+         #social:hover {
+           
+          opacity:0.3;
+       }
+
+        #logos {
+            border-radius: 100%;
+            margin-top: 20px;
+        }
+
+        #github_link {
+            width: 100px;
+            height: 50px;
+            background-color: royalblue;
+            border-radius: 100px;
+            color: white;
+            font-family: gill_internal;
+            margin-top: 10px;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        #main-image{
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 1.5s;
+            animation-name: zoom;
+            animation-duration: 1.5s;
+        }
 
         @media only screen and (max-width: 600px) {
-#who{
-    top:100px;
-}
+            #who {
+                top: 100px;
+            }
 
             #responsive {
                 margin-top: 180%;
@@ -217,16 +266,18 @@
             #level {
                 width: 300% !important;
             }
-            #section4{
-    display:flex; 
-    flex-direction: row;
-    flex-wrap: wrap;
-    }
 
-#main-image{
-    width:200%;
-    opacity:0.1;
-}
+            #section4 {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            #main-image {
+                width: 200%;
+                opacity: 0.1;
+                
+            }
         }
 
         /* 100% Image Width on Smaller Screens */
@@ -249,7 +300,7 @@
 
 
         #skill-text {
-            font-family:  gill_internal;
+            font-family: gill_internal;
             margin-bottom: 2px;
             color: #f2f2f2;
             font-size: 15px;
@@ -257,7 +308,7 @@
 
         #other-skills {
             font-size: 15px;
-            font-family:   gill_internal;
+            font-family: gill_internal;
             color: white;
         }
 
@@ -273,11 +324,10 @@
             margin: 50px;
         }
 
-#section4{
-    display:flex; 
-    flex-direction: row;
-    }
-
+        #section4 {
+            display: flex;
+            flex-direction: row;
+        }
     </style>
 </head>
 
@@ -305,9 +355,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c36dc', end
         </div>
 
         <div style="display: flex; flex-direction: row">
-            <div><img src="./Assets/linkedin.png" width=60px style="margin-right:20px"></div>
-            <div><img src="./Assets/github.png" width=60px style="margin-right:20px"></div>
-            <div><img src="./Assets/facebook.png" width=60px style="margin-right:20px"></div>
+            <a href="https://www.linkedin.com/in/aakarshsin/">
+                <div id="social"><img src="./Assets/linkedin.png" width=60px style="margin-right:20px"></div>
+            </a>
+            <a href="https://github.com/Aakarshs">
+                <div id="social"><img src="./Assets/github.png" width=60px style="margin-right:20px"></div>
+            </a>
+            <a href="https://www.facebook.com/aakarshsin">
+                <div id="social"><img src="./Assets/facebook.png" width=60px style="margin-right:20px"></div>
+            </a>
         </div>
     </div>
 
@@ -343,8 +399,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c36dc', end
                             <div><img src="./Assets/nadalogo.png" width=100px style="margin-right:20px"></div>
                             <div style="display: flex; flex-direction: column">
                                 <div id="title">Nadabot</div>
-                                <div id="position">Chief Product Officer</div>
+                                <div id="position">Co-Founder and Chief Product Officer</div>
+                                <div id="date"><img src="./Assets/calendar.png" style="width:20px; padding-right: 5px;" />
+                                    Jan 2018 - Present</div>
                                 <div id="paragraph">
+                                    <a style="color:#8CC63F" href="www.nadachatbot.com">www.nadachatbot.com</a><br /><br />
+                                    NadaBot is a Natural Language Interface app that centralizes information about
+                                    resources and opportunities for students within university communities. NadaBot
+                                    helps you advertise whatever you want to sell within the convenience and safety of
+                                    your community.
+                                    <br /><br />
                                     <ul>
                                         <li>Co-founded an A.I. driven app that connects students within their college’s
                                             virtual marketplace. </li>
@@ -364,7 +428,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c36dc', end
                             <div style="display: flex; flex-direction: column">
                                 <div id="title">Freezie Apps</div>
                                 <div id="position">Co-Founder</div>
+                                <div id="date"><img src="./Assets/calendar.png" style="width:20px; padding-right: 5px;" />
+                                    Jan 2018 - Present</div>
                                 <div id="paragraph">
+                                    <a style="color:#8CC63F" href="www.freezieapps.com">www.freezieapps.com</a><br /><br />
+
                                     <ul>
                                         <li> Released Rollyal (our first game) in August, had over 500 downloads in
                                             first
@@ -383,17 +451,28 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c36dc', end
                             <div style="display: flex; flex-direction: column">
                                 <div id="title">Methane Hub</div>
                                 <div id="position">Interim Chief Technology Officer</div>
+                                <div id="date"><img src="./Assets/calendar.png" style="width:20px; padding-right: 5px;" />
+                                    Jan 2018 - Present</div>
                                 <div id="paragraph">
-                                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                    doloremque
-                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                                    voluptas
-                                    sit
-                                    aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-                                    vel illum qui dolorem eum fugiat quo voluptas nulla
-                                    pariatur?"
+                                    <a style="color:#8CC63F" href="http://earlham.edu/giving/giving-stories/article/?id=59835&r=37081">Article</a><br /><br />
+
+                                    Methane hub developed a alternative energy solution and won $22,500 in start-up
+                                    capital and office space to jump start a new business venture. Methane Hub offers a
+                                    business opportunity for Haitian entrepreneurs to earn money by selling compressed
+                                    biogas produced from human and animal waste that is created by going through a
+                                    digester, a large tank that is part of the biogas system.
+                                    <br />
+                                    <br />
+                                    <ul>
+                                        <li>Assisted methane hub model a transition into a new business plan that uses
+                                            low cost cell phones in less developed countries to order biogas.</li>
+
+                                        <li>Represented earlham college in the Hult Prize competition 2018 in San
+                                            Francisco as a part of methane hub.</li>
+
+                                        <li>Currently assisting methane hub into setting up a sustainable, green
+                                            initiative to reduce earlham operating costs.</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -403,17 +482,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c36dc', end
                             <div style="display: flex; flex-direction: column">
                                 <div id="title">House of Design</div>
                                 <div id="position">Founder and CEO</div>
+                                <div id="date"><img src="./Assets/calendar.png" style="width:20px; padding-right: 5px;" />
+                                    Jan 2018 - Present</div>
                                 <div id="paragraph">
-                                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                    doloremque
-                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                                    voluptas
-                                    sit
-                                    aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-                                    vel illum qui dolorem eum fugiat quo voluptas nulla
-                                    pariatur?"
+                                    <a style="color:#8CC63F" href="www.houseofrouth.com">www.houseofrouth.com</a><br /><br />
+
+                                    Founded a design firm "HouseofRouth" soon to be "HouseofDesign" that has catered to
+                                    the design needs of over
+                                    100 clients all over the world. We have designed: brochures, logos, websites etc.
+                                    "HouseofRouth" also does design jobs for free for non-profit organizations. A
+                                    subsidiary of HouseOfDesign, "Infiniti apparel" is an extention of "HouseofRouth"
+                                    apparel brand that houses and
+                                    sells apparel exclusively designed by HouseOfDesign.
+
                                 </div>
                             </div>
                         </div>
@@ -423,18 +504,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c36dc', end
                             <div><img src="./Assets/oxaro.png" width=100px style="margin-right:20px; border-radius:500;"></div>
                             <div style="display: flex; flex-direction: column">
                                 <div id="title">Oxaro</div>
-                                <div id="position">Chief Product Officer</div>
+                                <div id="position">Co-Founder</div>
+                                <div id="date"><img src="./Assets/calendar.png" style="width:20px; padding-right: 5px;" />
+                                    Jan 2018 - Present</div>
                                 <div id="paragraph">
-                                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                    doloremque
-                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                                    voluptas
-                                    sit
-                                    aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-                                    vel illum qui dolorem eum fugiat quo voluptas nulla
-                                    pariatur?"
+                                    <a style="color:#8CC63F" href="https://www.facebook.com/mart.oxaro/">Oxaro(Facebook)</a><br /><br />
+
+                                    Oxaro is an extracurricular organization. Helped administer and organize National,
+                                    Interstate and inter-school Co-curricular events.
+                                    <br />
+                                    <br />
+                                    <ul>
+                                        <li>Managened several events inclusing an interstate MUN</li>
+                                        <li>Managed all aspects of a inter-state sports competetion</li>
+                                        <li>Designed and managed websites, managed registration and other aspects of
+                                            the event.
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -443,18 +529,28 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c36dc', end
                             <div><img src="./Assets/earlham.png" width=100px style="margin-right:20px"></div>
                             <div style="display: flex; flex-direction: column">
                                 <div id="title">Earlham college</div>
-                                <div id="position">Tutor/Teaching Assitant</div>
+
+                                <div id="date"><img src="./Assets/calendar.png" style="width:20px; padding-right: 5px;" />
+                                    Jan 2018 - Present</div>
                                 <div id="paragraph">
-                                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                    doloremque
-                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                                    voluptas
-                                    sit
-                                    aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-                                    vel illum qui dolorem eum fugiat quo voluptas nulla
-                                    pariatur?"
+                                    <div id="position">Tutor/Teaching Assitant</div>
+                                    <ul>
+                                        <li> Assist students one-on-one with programming in class, during labs, and
+                                            outside of class </li>
+                                        <li> Provide feedback and instructions on their code </li>
+                                        <li> Hold tutoring sessions weekly for Programming & Problem Solving and Data
+                                            Structures (Python) </li>
+                                        <li> Collaborate with 3 professors in CS department </li>
+                                        <li> Taught intro level classes when the professor was absent. </li>
+                                    </ul>
+                                    <div id="position">Co-op Community Convener</div>
+                                    <ul>
+                                        <li> Plan events for an intentional living community on campus.</li>
+                                        <li> Participate in Earlham Student Government weekly meetings.</li>
+                                        <li> Advocate for needs and wants of Co-Op Hall residents, work directly
+                                            with administration.</li>
+                                    </ul>
+
                                 </div>
                             </div>
                         </div>
@@ -464,17 +560,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c36dc', end
                             <div style="display: flex; flex-direction: column">
                                 <div id="title">La Martiniere College</div>
                                 <div id="position">Web Developer</div>
+                                <div id="date"><img src="./Assets/calendar.png" style="width:20px; padding-right: 5px;" />
+                                    Jan 2018 - Present</div>
                                 <div id="paragraph">
-                                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                    doloremque
-                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                                    voluptas
-                                    sit
-                                    aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-                                    vel illum qui dolorem eum fugiat quo voluptas nulla
-                                    pariatur?"
+                                    Designed, developed, and maintained websites for several departments and
+                                    organizations on and off campus
                                 </div>
                             </div>
                         </div>
@@ -489,21 +579,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c36dc', end
                         </div>
 
                         <div id="sections" style="display: flex; flex-direction: row">
-                            <div><img src="./Assets/fish.png" width=100px style="margin-right:20px"></div>
+                            <div><img src="./Assets/fish.png" width=100px style="margin-right:20px">
+                                <div id="github_link">
+                                    <div>Private Repo</div>
+                                </div>
+                            </div>
                             <div style="display: flex; flex-direction: column">
                                 <div id="title">Fish Findr</div>
-                                <div id="position">Web Developer</div>
+                                <div id="date"><img src="./Assets/calendar.png" style="width:20px; padding-right: 5px;" />
+                                    Jan 2018 - Present</div>
                                 <div id="paragraph">
-                                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                    doloremque
-                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                                    voluptas
-                                    sit
-                                    aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-                                    vel illum qui dolorem eum fugiat quo voluptas nulla
-                                    pariatur?"
+                                    A social media application made for aspiring and seasoned fishermen where they can
+                                    find and connect with other fishermen. They can also compete for the leaderboards.
+
+                                    I designed the front end using react native while the database, authentication and
+                                    hosting with is done using Firebase. The GitHub for this is private.
                                 </div>
                             </div>
                         </div>
@@ -511,83 +601,95 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c36dc', end
                         <br />
 
                         <div id="sections" style="display: flex; flex-direction: row">
-                            <div><img src="./Assets/bug.png" width=100px style="margin-right:20px"></div>
+                            <div><img src="./Assets/bug.png" width=100px style="margin-right:20px">
+                                <div id="github_link">
+                                    <div>Github Repo</div>
+                                </div>
+                            </div>
                             <div style="display: flex; flex-direction: column">
                                 <div id="title">The Bug</div>
-                                <div id="position">Web Developer</div>
+                                <div id="date"><img src="./Assets/calendar.png" style="width:20px; padding-right: 5px;" />
+                                    Jan 2018 - Present</div>
                                 <div id="paragraph">
-                                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                    doloremque
-                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                                    voluptas
-                                    sit
-                                    aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-                                    vel illum qui dolorem eum fugiat quo voluptas nulla
-                                    pariatur?"
+                                    An initiative to improve my own programming skills as well as help others on the
+                                    way I started a blog that helps people learn the basics of programming while
+                                    touching some advanced topics in the process.
                                 </div>
                             </div>
                         </div>
 
                         <div id="sections" style="display: flex; flex-direction: row">
-                            <div><img src="./Assets/calculator.png" width=100px style="margin-right:20px"></div>
+                            <div><img src="./Assets/calculator.png" width=100px style="margin-right:20px">
+                                <div id="github_link">
+                                    <div>Github Repo</div>
+                                </div>
+                            </div>
                             <div style="display: flex; flex-direction: column">
                                 <div id="title">The Calculator</div>
-                                <div id="position">Web Developer</div>
+                                <div id="date"><img src="./Assets/calendar.png" style="width:20px; padding-right: 5px;" />
+                                    Jan 2018 - Present</div>
                                 <div id="paragraph">
-                                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                    doloremque
-                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                                    voluptas
-                                    sit
-                                    aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-                                    vel illum qui dolorem eum fugiat quo voluptas nulla
-                                    pariatur?"
+                                    I used react native to build a flexible expression parser with support for
+                                    symbolic computation. The calculator comes with a large set of built-in functions
+                                    and constants and offers an integrated solution to work with different data types
+                                    like numbers, big numbers, complex numbers, fractions, units, and matrices.
+                                    <br /><br />
+                                    Powerful and easy to use.The app supports real time conversion of units as well as
+                                    real time calculation of quadratic equations, linear equations and cubic equation.
                                 </div>
                             </div>
                         </div>
 
 
                         <div id="sections" style="display: flex; flex-direction: row">
-                            <div><img src="./Assets/tsa.png" width=100px style="margin-right:20px"></div>
+                            <div><img src="./Assets/tsa.png" width=100px style="margin-right:20px">
+                                <div id="github_link">
+                                    <div>Github Repo</div>
+                                </div>
+                            </div>
                             <div style="display: flex; flex-direction: column">
                                 <div id="title">Twitter Sentiment Analysis App</div>
-                                <div id="position">Web Developer</div>
+                                <div id="date"><img src="./Assets/calendar.png" style="width:20px; padding-right: 5px;" />
+                                    Jan 2018 - Present</div>
                                 <div id="paragraph">
-                                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                    doloremque
-                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                                    voluptas
-                                    sit
-                                    aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-                                    vel illum qui dolorem eum fugiat quo voluptas nulla
-                                    pariatur?"
+                                    Started as a class project. It performs sentiment analysis on large Yelp datasets
+                                    of customer reviews from on kaggle using MapReduce and the Hadoop Distributed
+                                    System. The data is processed as a long string and then tokenized to obtain for
+                                    each record the Business ID, Review ID, Review text, and Star rating of the yelp
+                                    reviews dataset.
+                                    <br /><br />
+                                    The program checks the accuracy of the star rating of a given restaurant by going
+                                    through the written reviews and calculating the sentiment of each business and
+                                    giving out a predicted star rating. Then, it calculates the average star difference
+                                    for each business.
+                                    <br /><br />
+                                    Finally, calculate the difference for each business. This will make it so business
+                                    with only a few reviews are taken into account more for the difference. We are
+                                    working on porting this to iOS using react native along with the Twitter API to get
+                                    tweets directly from Twitter.
                                 </div>
                             </div>
                         </div>
 
 
                         <div id="sections" style="display: flex; flex-direction: row">
-                            <div><img src="./Assets/ni.png" width=100px style="margin-right:20px"></div>
+                            <div><img src="./Assets/ni.png" width=100px style="margin-right:20px">
+                                <div id="github_link">
+                                    <div>Github Repo</div>
+                                </div>
+                            </div>
                             <div style="display: flex; flex-direction: column">
                                 <div id="title">Noteit!</div>
-                                <div id="position">Web Developer</div>
+                                <div id="date"><img src="./Assets/calendar.png" style="width:20px; padding-right: 5px;" />
+                                    Jan 2018 - Present</div>
                                 <div id="paragraph">
-                                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                    doloremque
-                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                                    voluptas
-                                    sit
-                                    aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                                    voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-                                    vel illum qui dolorem eum fugiat quo voluptas nulla
-                                    pariatur?"
+                                    The world lacks a good cross-platform note-taking web app unless you're willing to
+                                    submit to the confines of an Operating system’s ecosystem.
+                                    <br /><br />
+                                    I started working on this app this summer with the hopes to create a fully
+                                    functional cross-platform note-taking app that works flawlessly and looks amazing
+                                    while improving my AngularJS and NodeJS skills.
+
                                 </div>
                             </div>
                         </div>
@@ -835,7 +937,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c36dc', end
                                         sit
 
                                     </div>
-                                    <img id="myImg" src="./Assets/aakarsh.png" alt="Snow" style="width:100%;max-width:300px">
+                                    <img id="logos" id="myImg" src="./Assets/4.png" alt="Snow" style="width:100%;max-width:250px">
                                     <div id="myModal" class="modal">
                                         <span class="close">&times;</span>
                                         <img class="modal-content" id="img01">
@@ -855,7 +957,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c36dc', end
                                         sit
 
                                     </div>
-                                    <img id="myImg2" src="./Assets/calculator.png" alt="Snow" style="width:100%;max-width:300px">
+                                    <img id="logos" id="myImg2" src="./Assets/3.png" alt="Snow" style="width:100%;max-width:250px">
                                     <div id="myModal2" class="modal">
                                         <span class="close">&times;</span>
                                         <img class="modal-content" id="img02">
@@ -875,7 +977,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c36dc', end
                                         sit
 
                                     </div>
-                                    <img id="myImg3" src="./Assets/calculator.png" alt="Snow" style="width:100%;max-width:300px">
+                                    <img id="logos" id="myImg3" src="./Assets/2.png" alt="Snow" style="width:100%;max-width:250px">
                                     <div id="myModal3" class="modal">
                                         <span class="close">&times;</span>
                                         <img class="modal-content" id="img03">
@@ -894,7 +996,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5c36dc', end
                                         sit
 
                                     </div>
-                                    <img id="myImg4" src="./Assets/calculator.png" alt="Snow" style="width:100%;max-width:300px">
+                                    <img id="logos" id="myImg4" src="./Assets/1.png" alt="Snow" style="width:100%;max-width:250px">
                                     <div id="myModal4" class="modal">
                                         <span class="close">&times;</span>
                                         <img class="modal-content" id="img04">
